@@ -1,0 +1,371 @@
+
+
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Section Product Store</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f4f4f4; }
+  h1 { text-align:center; color:#264653; margin-bottom:10px; }
+
+  /* Categories */
+  #categories { display:flex; overflow-x:auto; gap:10px; margin-bottom:20px; padding-bottom:5px; }
+  .category { flex-shrink:0; padding:10px 20px; background:#2a9d8f; color:#fff; border-radius:20px; cursor:pointer; white-space:nowrap; transition:0.2s; }
+  .category:hover, .category.active { background:#e76f51; }
+
+  /* Search */
+  #search { display:block; margin:0 auto 20px; padding:10px; width:90%; max-width:400px; border-radius:8px; border:1px solid #ccc; }
+
+  /* Section */
+  .section { margin-bottom:30px; }
+  .section-title {text-align: center ;font-weight :;font-size:23px; margin-bottom:10px; color:#264653; }
+  .cards { display:flex; overflow-x:auto; gap:20px; padding-bottom:10px; }
+  .cards::-webkit-scrollbar { height:8px; }
+  .cards::-webkit-scrollbar-thumb { background:#ccc; border-radius:4px; }
+  .cards::-webkit-scrollbar-track { background:#f4f4f4; }
+
+  /* Card */
+  .card { width:80%; background:#fff; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.15); flex-shrink:0; transition:transform 0.2s; }
+  .card:hover { transform:translateY(-5px); }
+  .card img { width:100%; height:180px; object-fit:cover; border-top-left-radius:10px; border-top-right-radius:10px; }
+  .card h3 { font-size:16px; margin:10px; color:#264653; }
+  .card p { margin:0 10px 10px; font-weight:bold; color:#e76f51; }
+  .card a { display:block; margin:0 10px 10px; text-align:center; background:#264653; color:#fff; text-decoration:none; padding:8px; border-radius:5px; }
+  .card a:hover { background:#2a9d8f; }
+</style>
+</head>
+<body>
+
+<h1>Multi-Section Product Store</h1>
+<div class="live"> 
+    <br> 
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"></iframe> 
+   </div> 
+   <br> 
+  </div> 
+<!-- Category Bar -->
+<div id="categories">
+  <div class="category active" data-category="all">All</div>
+  <div class="category" data-category="electronics">Electronics</div>
+  <div class="category" data-category="fashion">Fashion</div>
+  <div class="category" data-category="home">Home</div>
+<div class="category" data-category="Docters">Docters</div>
+<div class="category" data-category="music ">Musics</div>
+
+<div class="category" data-category="hoteos">Hotels</div>
+<div class="category" data-category="Recipy">Recipy</div>
+<div class="category" data-category="News">News</div>
+<div class="category" data-category="dates">Dates</div>
+
+<div class="category" data-category="Crowdfund ">Crowdfund </div>
+
+</div>
+<div style ="text-align :center ;display :flx ;">
+  <button style ="width :fit-content ;text-align :center ;border :0px;" class ="category">REGISTER </button >
+</div>
+<br>
+<!-- Search -->
+<input type="text" id="search" placeholder="Search products...">
+
+  
+  <!-- Sections -->
+<div id="sections-container">
+
+  <!-- Electronics Section -->
+  <div class="section" data-category="electronics">
+    <div class="section-title">Electronics</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?electronics,earbuds" alt="Wireless Earbuds">
+        <h3>Wireless Earbuds</h3>
+        <p>$19.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?electronics,smartwatch" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$39.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?electronics,projector" alt="Mini Projector">
+        <h3>Mini Projector</h3>
+        <p>$59.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fashion Section -->
+  <div class="section" data-category="fashion">
+    <div class="section-title">Fashion</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?fashion,tshirt" alt="T-Shirt">
+        <h3>iran war nitish paralised since Cool T-Shirt</h3>
+        <p>$25.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?fashion,shoes" alt="Sneakers">
+        <h3>Sneakers</h3>
+        <p>$49.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?fashion,jacket" alt="Jacket">
+        <h3>Leather Jacket</h3>
+        <p>$89.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <div class="section" data-category="home">
+    <div class="section-title">Home</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+  
+<div class="section" data-category="home">
+    <div class="section-title">News</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section" data-category="docter ">
+    <div class="section-title">Docter</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="section" data-category="hotel">
+    <div class="section-title">Hotels</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="section" data-category="crowdfund ">
+    <div class="section-title">Crowdfunds</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+    
+<div class="section" data-category="Musics">
+    <div class="section-title">Musics</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" data-category="datedls">
+    <div class="section-title">Dates</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+    
+  <div class="section" data-category="Recipy">
+    <div class="section-title">Recipy</div>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,blender" alt="Portable Blender">
+        <h3>Portable Blender</h3>
+        <p>$29.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,desk-lamp" alt="LED Desk Lamp">
+        <h3>LED Desk Lamp</h3>
+        <p>$15.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x400/?home,coffee" alt="Coffee Maker">
+        <h3>Coffee Maker</h3>
+        <p>$22.99</p>
+        <a href="#">Buy Now</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+  
+<script>
+// Category click
+const categoryButtons = document.querySelectorAll(".category");
+const sections = document.querySelectorAll(".section");
+const searchInput = document.getElementById("search");
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    filterSections(btn.dataset.category, searchInput.value);
+  });
+});
+
+// Search input
+searchInput.addEventListener("input", () => {
+  const activeCategory = document.querySelector(".category.active").dataset.category;
+  filterSections(activeCategory, searchInput.value);
+});
+
+// Filter function
+function filterSections(category, searchText) {
+  searchText = searchText.toLowerCase();
+  sections.forEach(section => {
+    let show = false;
+    const cards = section.querySelectorAll(".card");
+    cards.forEach(card => {
+      const cardText = card.querySelector("h3").textContent.toLowerCase();
+      const matchText = cardText.includes(searchText);
+      const matchCategory = (category === "all") || (section.dataset.category === category);
+      card.style.display = (matchText && matchCategory) ? "block" : "none";
+      if(matchText && matchCategory) show = true;
+    });
+    section.style.display = show ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
